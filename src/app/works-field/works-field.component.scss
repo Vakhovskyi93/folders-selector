@@ -1,0 +1,28 @@
+.container{
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+}
+.select-area {
+  padding: 10px 0;
+  background: rgba(189, 187, 187, 0.93);
+  width: 100%;
+  height: fit-content;
+  display: flex;
+}
+.folder-item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50px;
+
+  p{
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
+
+  img{
+    width: 50px;
+  }
+}

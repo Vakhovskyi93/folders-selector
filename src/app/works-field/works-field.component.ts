@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-works-field',
@@ -7,7 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WorksFieldComponent implements OnInit {
 
-  constructor() { }
+  foldersList = [
+    { name: 'First'},
+    { name: 'Second'},
+    { name: 'Third'},
+    { name: 'Fourth'},
+  ]
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
