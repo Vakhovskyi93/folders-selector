@@ -8,11 +8,12 @@ import {Component, OnInit} from '@angular/core';
 export class WorksFieldComponent implements OnInit {
 
   foldersList = [
-    { name: 'First'},
-    { name: 'Second'},
-    { name: 'Third'},
-    { name: 'Fourth'},
-  ]
+    {name: 'First'},
+    {name: 'Second'},
+    {name: 'Third'},
+    {name: 'Fourth'},
+  ];
+  selectedFoldersList: String[] = []
 
   constructor() {
   }

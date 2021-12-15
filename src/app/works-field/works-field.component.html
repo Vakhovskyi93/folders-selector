@@ -1,5 +1,7 @@
 <div class="container">
-
+  <div *ngIf="selectedFoldersList.length">
+    <p >Selected Folders: <span *ngFor="let name of selectedFoldersList">{{name}}</span> </p>
+  </div>
   <div class="select-area">
 
       <div class="folder-item" *ngFor="let item of foldersList">
