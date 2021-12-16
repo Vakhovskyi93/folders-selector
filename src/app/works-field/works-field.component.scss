@@ -8,6 +8,7 @@
   padding: 10px 0;
   background: rgba(189, 187, 187, 0.93);
   width: 100%;
+  min-height: 150px;
   height: fit-content;
   display: flex;
 }
@@ -25,4 +26,15 @@
   img{
     width: 50px;
   }
+}
+
+.selected {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(195, 223, 255, 0.5);
+  border: 4px rgb(96, 169, 218) dashed;
+  pointer-events: none;
 }
