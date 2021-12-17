@@ -1,15 +1,18 @@
 <div class="container">
-  <div *ngIf="selectedFoldersList.length">
-    <p>Selected Folders: <span *ngFor="let name of selectedFoldersList">{{name}}</span></p>
+  <div>
+    <p>
+      Selected Folders:
+      <span *ngIf="selectedFolders"> {{ selectedFolders }}</span>
+    </p>
   </div>
-  <div class="select-area" #selectArea>
 
-    <div class="folder-item" *ngFor="let item of foldersList" #folder>
-      <p>{{item.name}}</p>
-      <img src="/assets/icons/folder-icon-2.png" alt="">
+  <div class="select-area" #workField>
+    <div class="folder-item" *ngFor="let item of foldersList" #folder [ngClass]='{"selected-folder": selectedFolderStyle(item.name)}'>
+      <p>{{ item.name }}</p>
+      <img  src="/assets/icons/folder-icon-2.png" alt="" />
+       
     </div>
+
+    <div class="selected-area" [style]="parametrsForSelectedZone()" #selectedZone></div>
   </div>
-
-
 </div>
-
