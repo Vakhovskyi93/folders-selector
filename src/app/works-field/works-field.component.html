@@ -10,9 +10,7 @@
     <div class="folder-item" *ngFor="let item of foldersList" #folder [ngClass]='{"selected-folder": selectedFolderStyle(item.name)}'>
       <p>{{ item.name }}</p>
       <img  src="/assets/icons/folder-icon-2.png" alt="" />
-       
     </div>
-
-    <div class="selected-area" [style]="parametrsForSelectedZone()" #selectedZone></div>
+    <div class="selected-area"  [style]="parametrsForSelectedZone()" #selectedZone></div>
   </div>
 </div>
