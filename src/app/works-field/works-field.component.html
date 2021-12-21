@@ -2,23 +2,21 @@
   <div>
     <p>
       Selected Folders:
-      <span *ngIf="selectedFolders"> {{ selectedFolders }}</span>
+      <span *ngIf="selectedFolders"> {{selectedFolders}}</span>
     </p>
   </div>
 
   <div class="select-area" #workField>
-    <div
-      class="folder-item"
-      *ngFor="let item of foldersList"
-      #folder
-      [@selectedFolder]="selectedFolderStyle(item.name) ? 'selected' : 'unselected'"
+    <div class="folder-item"
+         *ngFor="let item of foldersList"
+         #folder
+         [@selectedFolder]="selectedFolderStyle(item.name) ? 'selected' : 'unselected'"
     >
-      <p>{{ item.name }}</p>
+      <p>{{item.name}}</p>
     </div>
-    <div
-      class="selected-area"
-      [style]="parametrsForSelectedZone()"
-      #selectedZone
+    <div [style]="parametrsForSelectedZone()"
+         [class.selected-area]="selectedAreaStyle"
+         #selectedZone
     ></div>
   </div>
 </div>

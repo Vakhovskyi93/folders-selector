@@ -1,20 +1,20 @@
 .container{
+  position: relative;
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  position: relative;
 }
 
 .select-area {
-  padding: 10px 0;
-  background: rgba(189, 187, 187, 0.93);
+  position: relative;
+  display: flex;
   width: 100%;
   height: fit-content;
   min-height: 250px;
-  display: flex;
-  cursor: default;
-  position: relative;
   z-index: 2;
+  padding: 10px 0;
+  cursor: default;
+  background: rgba(189, 187, 187, 0.93);
 }
 
 .select-area::after{
@@ -52,10 +52,13 @@
 }
 
 .selected-area{
+  position: absolute;
+  z-index: 5; 
   background: blue;
   opacity: .2;
   border: 1px dot-dash blue;
-  position: absolute;
-  z-index: 5; 
+   
 }
+
+ 
  
