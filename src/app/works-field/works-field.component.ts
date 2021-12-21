@@ -58,13 +58,13 @@ export class WorksFieldComponent implements AfterViewInit , OnDestroy{
   };
   selectedAreaStyle = false;
 
-  @ViewChild('workField') workField!: ElementRef;
-  @ViewChild('selectedZone') selectedZone!: ElementRef;
-  @ViewChildren('folder') folder!: QueryList<ElementRef<HTMLElement>>;
+  @ViewChild('workField') workField: ElementRef;
+  @ViewChild('selectedZone') selectedZone: ElementRef;
+  @ViewChildren('folder') folder: QueryList<ElementRef<HTMLElement>>;
 
-  folders!: Subscription;
-  area!: Subscription;
-  areaSelected!: Subscription;
+  folders: Subscription;
+  area: Subscription;
+  areaSelected: Subscription;
 
   ngAfterViewInit() {
     this.area = fromEvent<MouseEvent>(this.workField.nativeElement, 'mousedown')
@@ -74,7 +74,6 @@ export class WorksFieldComponent implements AfterViewInit , OnDestroy{
           this.selectedArea.startPointY = mousedown.y;
           this.selectedAreaStyle = true;
         }),
-        
         switchMap(mousedown =>
           fromEvent<MouseEvent>(this.workField.nativeElement, 'mousemove').pipe(
             startWith(mousedown),
@@ -109,8 +108,8 @@ export class WorksFieldComponent implements AfterViewInit , OnDestroy{
                     )
                     .map(item => item.nativeElement.innerText)
                     .join(', ')),
-                  tap(data=> this.selectedFolders = data)
-                  )),
+            tap(data=> this.selectedFolders = data)
+            )),
         ) 
         .subscribe();
   }
